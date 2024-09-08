@@ -12,5 +12,5 @@ hi [at] poemgreen.xyz
 **状态**  
 <https://status.poemgreen.xyz>  
 
-**订阅**  
+**RSS**  
 <https://poemgreen.xyz/index.xml>  
