@@ -1,18 +1,9 @@
 baseURL: "https://poemgreen.xyz"
-defaultContentLanguage: zh
 title: "绿 松 石"
 
 minify: true
+defaultContentLanguage: zh
 disableHugoGeneratorInject: true
 
 permalinks:
   posts: "/:filename"
-  pages: "/:filename"
-
-outputs:
-  home:
-    - "HTML"
-    - "RSS"
-  section:
-    - "HTML"
-    - "RSS"
