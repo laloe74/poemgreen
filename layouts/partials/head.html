@@ -1,11 +1,11 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ absURL "assets/apple-touch-icon.png" }}">
-  <link rel="shortcut icon" href="{{ absURL "assets/favicon.png" }}">
-  {{ $styles := resources.Get "styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
-  <style>{{ $styles.Content | safeCSS }}</style>
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/index.xml" | relURL }}">
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/index.xml" | relURL }}">
+<!-- favicon -->
+<link rel="shortcut icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<!-- CSS -->
+{{ $styles := resources.Get "styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
+<style>{{ $styles.Content | safeCSS }}</style>
