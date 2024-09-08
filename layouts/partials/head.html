@@ -3,10 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <link rel="apple-touch-icon" sizes="180x180" href="{{ absURL "assets/apple-touch-icon.png" }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ absURL "assets/favicon32x32.png" }}">
-  <link rel="icon" type="image/png" sizes="64x64" href="{{ absURL "assets/favicon64x64.png" }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ absURL "assets/favicon192x192.png" }}">
   <link rel="shortcut icon" href="{{ absURL "assets/favicon.png" }}">
   {{ $styles := resources.Get "styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
   <style>{{ $styles.Content | safeCSS }}</style>
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/index.xml" | relURL }}">
 </head>
