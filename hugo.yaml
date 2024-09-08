@@ -1,0 +1,37 @@
+baseURL: "https://poemgreen.xyz"
+languageCode: "zh-CN"
+title: "绿 松 石"
+disableKinds:
+  - "section"
+pygmentsCodeFences: false
+pygmentsUseClasses: false
+paginate: 9999
+minify: true
+disableHugoGeneratorInject: true
+disableLiveReload: true
+
+permalinks:
+  posts: "/:filename"
+  pages: "/:slug"
+
+outputs:
+  home:
+    - "HTML"
+  section:
+    - "HTML"
+    - "RSS"
+
+menu:
+  main:
+    - identifier: "index"
+      name: "Index"
+      url: "/"
+      weight: -111
+    - identifier: "views"
+      name: "Views"
+      url: "/views/"
+      weight: -30
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
+      weight: -20

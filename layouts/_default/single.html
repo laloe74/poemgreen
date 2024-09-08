@@ -1,0 +1,36 @@
+<!doctype html>
+{{ partial "head.html" . }}
+<body>
+<main id="main">
+  <div class="content">
+    {{ partial "header.html" . }}
+    <!-- 如果是 posts 里的文章 -->
+    {{ if eq .Type "posts" }}
+      <h2 class="post">{{ .Title }}</h2>
+      <br><br><br>
+      {{ .Content }}
+    {{ end }}
+    <!-- 如果是 views 里的文章 -->
+    {{ if eq .Type "views" }}
+      <h2 class="post">{{ .Title }}</h2>
+      <p>© {{ .Params.author }}</p>
+      <br><br><br>
+      {{ .Content }}
+    {{ end }}
+    <!-- 如果是 views 主页 -->
+    {{ if eq .Title "views" }}
+      <p class="post">{{ .Content }}</p>
+      <ul class="list">
+        {{ range where .Site.Pages.ByDate.Reverse "Section" "views" }}
+          {{ if ne .Kind "section" }}
+          <li>
+            <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</main>
+</body>
+</html>
