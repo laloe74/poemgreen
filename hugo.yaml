@@ -2,8 +2,9 @@ baseURL: "https://poemgreen.xyz"
 title: "绿 松 石"
 
 minify: true
-defaultContentLanguage: zh
+cleanDestinationDir: true
 disableHugoGeneratorInject: true
+defaultContentLanguage: zh
 
 permalinks:
   posts: "/:filename"
