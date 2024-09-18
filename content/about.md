@@ -6,16 +6,11 @@ title: about
 
 ---
 
-**邮件**  
-hi [at] poemgreen.net  
-
 **状态**  
 <https://status.poemgreen.net>  
 
 **RSS**  
 <https://poemgreen.net/index.xml>  
 
----
-
-**更多**  
-<https://keooq.com>  
+**博客**  
+明文 - [凯撒 +3] -> `nhrrt.frp`  
